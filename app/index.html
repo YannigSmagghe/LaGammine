@@ -73,87 +73,96 @@
   <div class="mdl-layout__drawer is-visible">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Biographie/Projet</a>
-      <a class="mdl-navigation__link" href="#">Musique/Vidéos</a>
-      <a class="mdl-navigation__link" href="#">Presse</a>
-      <a class="mdl-navigation__link" href="#">Contact</a>
+      <a class="mdl-navigation__link" id="accueil"    onclick="changeMenu(this.id)" href="#">Accueil</a>
+      <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie/Projet</a>
+      <a class="mdl-navigation__link" id="music"      onclick="changeMenu(this.id)" href="#">Musique/Vidéos</a>
+      <a class="mdl-navigation__link" id="presse"     onclick="changeMenu(this.id)" href="#">Presse</a>
+      <a class="mdl-navigation__link" id="contact"    onclick="changeMenu(this.id)" href="#">Contact</a>
     </nav>
     <!--NAV CASCADE-->
     <!--<nav id="menu21" class="vertical ">-->
-      <!--<ul>-->
-        <!--<li><a href="">Home</a></li>-->
-        <!--<li><a href="#">Products +</a>-->
-          <!--<ul>-->
-            <!--<li><a href="#">Widgets</a></li>-->
-            <!--<li>-->
-              <!--<a href="#">Sites +</a>-->
-              <!--<ul>-->
-                <!--<li><a href="#">Site 1</a></li>-->
-                <!--<li><a href="#">Site 2</a></li>-->
-              <!--</ul>-->
-            <!--</li>-->
-            <!--<li>-->
-              <!--<a href="#">Gadgets +</a>-->
-              <!--<ul>-->
-                <!--<li><a href="#">Gadget 1</a></li>-->
-                <!--<li><a href="#">Gadget 2</a></li>-->
-              <!--</ul>-->
-            <!--</li>-->
-          <!--</ul>-->
-        <!--</li>-->
-        <!--<li><a href="">Contact</a></li>-->
-      <!--</ul>-->
+    <!--<ul>-->
+    <!--<li><a href="">Home</a></li>-->
+    <!--<li><a href="#">Products +</a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">Widgets</a></li>-->
+    <!--<li>-->
+    <!--<a href="#">Sites +</a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">Site 1</a></li>-->
+    <!--<li><a href="#">Site 2</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#">Gadgets +</a>-->
+    <!--<ul>-->
+    <!--<li><a href="#">Gadget 1</a></li>-->
+    <!--<li><a href="#">Gadget 2</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="">Contact</a></li>-->
+    <!--</ul>-->
     <!--</nav>-->
   </div>
   <!--END Nav Menu-->
   <main class="mdl-layout__content">
     <section class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--12-col main-container">
+        <section class="section-accueil">
         <div class="mdl-layout-title main-title">
           LA GAMMINE
         </div>
-
-        <div class="audio-controls mdl-cell mdl-cell--3-offset mdl-cell--6-col">
-          <!--<audio id="audioPlayer">-->
-          <!--<source src="music/titre2.mp3">-->
-          <!--</audio>-->
-<div>
-
-          <i id="prev" class="fa fa-backward fa-2x" aria-hidden="true"></i>
-          <span class="mdl-cell mdl-cell--1-col"></span>
-          <i id="play" onclick="play('audio-native', this)" class="fa fa-play fa-3x" aria-hidden="true"></i>
-          <span class="mdl-cell mdl-cell--1-col"></span>
-          <i id="next" onclick="nextMusic()" class="fa fa-forward fa-2x" aria-hidden="true"></i>
-  <div>
-    Titre de la chanson
-  </div>
-</div>
-        </div>
-        <!--Deskop interface-->
-        <div class="mdl-cell mdl-cell--3-col date-container mdl-cell--hide-tablet mdl-cell--hide-phone">
-          <div class="mdl-layout-title">
-            rendez vous sur scène
+          <div class="audio-controls mdl-cell mdl-cell--3-offset mdl-cell--6-col">
+            <div>
+              <i id="prev" class="fa fa-backward fa-2x" aria-hidden="true"></i>
+              <span class="mdl-cell mdl-cell--1-col"></span>
+              <i id="play" onclick="play('audio-native', this)" class="fa fa-play fa-3x" aria-hidden="true"></i>
+              <span class="mdl-cell mdl-cell--1-col"></span>
+              <i id="next" onclick="nextMusic()" class="fa fa-forward fa-2x" aria-hidden="true"></i>
+              <div>
+                Titre de la chanson
+              </div>
+            </div>
           </div>
-          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-            <tbody>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric">Olympia</td>
-              <td>25/05/2017</td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric">La cigale</td>
-              <td>18/06/2017</td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric">Bercy</td>
-              <td>21/06/2017</td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric">Festival du bout du monde</td>
-              <td>01/08/2017</td>
-            </tr>
-            </tbody>
-          </table>
+          <!--Deskop interface-->
+          <div class="mdl-cell mdl-cell--3-col date-container mdl-cell--hide-tablet mdl-cell--hide-phone">
+            <div class="mdl-layout-title">
+              rendez vous sur scène
+            </div>
+            <ul class="demo-list-item mdl-list list-date">
+              <li id="0" class="mdl-list__item mdl-list__item--three-line">
+                  <span class="mdl-list__item-primary-content">
+                    <span>La scène</span>
+                  </span>
+                <span class="mdl-list__item-secondary-content">
+                    17/50/5205
+                  </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section-biographie">
+          <div class="mdl-layout-title main-title">
+            BIOGRAPHIE
+          </div>
+        </section>
+        <section class="section-music">
+          <div class="mdl-layout-title main-title">
+            MUSIC
+          </div>
+        </section>
+        <section class="section-presse">
+          <div class="mdl-layout-title main-title">
+            PRESSE
+          </div>
+        </section>
+        <section class="section-contact">
+          <div class="mdl-layout-title main-title">
+            CONTACT
+          </div>
+        </section>
         </div>
       </div>
     </section>
@@ -170,9 +179,12 @@
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 <!-- build:js scripts/main.min.js -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js">
+</script>
 <script src="scripts/main.js"></script>
 <script src="scripts/custom.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/menu.js"></script>
+
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
