@@ -39,7 +39,6 @@
     "extends": "google"
   },
   "dependencies": {
-    "jplayer": "^2.9.2",
-    "jquery": "^3.2.1"
+    "material-modal": "^0.1.2"
   }
 }
