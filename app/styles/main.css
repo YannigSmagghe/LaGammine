@@ -224,9 +224,12 @@ html, body {
 
 .main-container{
   min-height: 89vh;
-  background: url('../images/gammine/backgroundContainer.jpg') center / cover;
-  /*background-color: #00bcd4;*/
+  background: url('../images/gammine/backgroundContainer.jpg') center / cover ;
+
 }
+.section-contact{
+}
+
 .main-container .mdl-layout-title{
   color: white;
   margin-left: 0;
@@ -237,7 +240,7 @@ html, body {
   display: none;
 }
 #audio-native{
-  display: none;
+  /*display: none;*/
 }
 
 .audio-controls{
@@ -254,11 +257,16 @@ html, body {
 /*Dates*/
 
 .date-container{
-  margin-left: 20vh;
-  margin-top: -10vh;
-  background-color: rgba(0, 0,  0, 0.3);
   padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: rgba(0, 0,  0, 0.3);
 }
+@media screen and (min-width: 940px) {
+  .date-container {
+    margin-top: -26vh;
+  }
+}
+
 
 .date-container > ul > li >* {
   color: #ffffff;

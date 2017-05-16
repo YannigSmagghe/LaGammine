@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['pseudo'] === 'Marie'):
+?>
 <!doctype html>
 <html lang="Fr">
 <head>
@@ -57,6 +61,7 @@
   <link rel="stylesheet" href="scripts/modal/material-modal.min.css">
   <!-- Your styles -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="scripts/uploader/dropezone.css">
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base ">
 <section class="mdl-layout  mdl-js-layout mdl-layout--fixed-header">
@@ -96,8 +101,12 @@
           MUSIC
         </div>
         <div class="mdl-cell mdl-cell--3-offset mdl-cell--6-col">
-          <input id="file" type="file" />
+          <input id="file" type="file" style="display:none"/>
+          <form action="upload.php"
+                class="dropzone"
+                id="my-awesome-dropzone"></form>
         </div>
+        Le titre du fichier sera le titre affiché dans le player.
       </div>
     </section>
     <section class="content-grid mdl-grid section--center section-admin-dates">
@@ -205,6 +214,7 @@
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="scripts/menu.js"></script>
+<script src="scripts/uploader/dropzone.js"></script>
 <!-- build:js scripts/main.min.js -->
 <!--<script src="../scripts/main.js"></script>-->
 <script src="scripts/admin-dates.js"></script>
@@ -223,3 +233,8 @@
 <!-- Built with love using Web Starter Kit -->
 </body>
 </html>
+<?php
+else :
+ header('Location: index.html');
+endif;
+?>
