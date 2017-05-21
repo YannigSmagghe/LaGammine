@@ -16,18 +16,19 @@ function getMusic(indexMusic) {
         srcBaseMusic.setAttribute('idMusic', indexMusic);
         //
         var title = $.map(data[indexMusic].title.split("."), $.trim);
-        console.log(title[0]);
+        titleMusic.empty();
         titleMusic.append(title[0]);
 
     });
   });
 }
 var srcBaseMusic = document.getElementById("baseMusic");
-var titleMusic = document.getElementById("TitleMusic");
+var titleMusic = $("#TitleMusic");
 var playElement = document.getElementById("play");
 var current = srcBaseMusic.getAttribute('idMusic');
 var player = document.querySelector('#audio-native');
 getMusic(current);
+
 function play() {
   if (player.paused) {
     player.play();
