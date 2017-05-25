@@ -73,11 +73,11 @@
   <div class="mdl-layout__drawer is-visible">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" id="accueil"    onclick="changeMenu(this.id)" href="#">Accueil</a>
-      <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie/Projet</a>
-      <a class="mdl-navigation__link" id="music"      onclick="changeMenu(this.id)" href="#">Musique/Vidéos</a>
-      <a class="mdl-navigation__link" id="presse"     onclick="changeMenu(this.id)" href="#">Presse</a>
-      <a class="mdl-navigation__link" id="contact"    onclick="changeMenu(this.id)" href="#">Contact</a>
+      <a class="mdl-navigation__link" id="accueil" onclick="changeMenu(this.id)" href="#">Accueil</a>
+      <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie</a>
+      <a class="mdl-navigation__link" id="music" onclick="changeMenu(this.id)" href="#">Medias</a>
+      <!--<a class="mdl-navigation__link" id="photo" onclick="changeMenu(this.id)" href="#">Photos</a>-->
+      <!--<a class="mdl-navigation__link" id="contact" onclick="changeMenu(this.id)" href="#">Contact</a>-->
     </nav>
     <!--NAV CASCADE-->
     <!--<nav id="menu21" class="vertical ">-->
@@ -111,9 +111,9 @@
     <section class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--12-col main-container">
         <section class="section-accueil">
-        <div class="mdl-layout-title main-title">
-          LA GAMMINE
-        </div>
+          <div class="mdl-layout-title main-title">
+            LA GAMMINE
+          </div>
           <div class="audio-controls mdl-cell mdl-cell--12-col">
             <div>
               <i id="prev" onclick="previousMusic()" class="fa fa-backward fa-2x" aria-hidden="true"></i>
@@ -127,7 +127,7 @@
           <!--Deskop interface-->
           <div class="mdl-cell mdl-cell--3-col date-container">
             <div class="mdl-layout-title">
-              rendez vous sur scène
+              Rendez-Vous
             </div>
             <ul class="demo-list-item mdl-list list-date">
               <li id="0" class="mdl-list__item mdl-list__item--three-line">
@@ -145,32 +145,54 @@
           <div class="mdl-layout-title main-title">
             BIOGRAPHIE
           </div>
+          <div class="mdl-cell mdl-cell--3-col biographie-container">
+            <p class="biographie-text">
+              Cheveux et guitare au vent, La Gammine transporte dans ses valises sa passion pour la musique et son envie
+              de faire entendre sa voix.<br/><br/><br/>
+              Dans le tremblement subtil de ses mélodies, elle mélange au rythme de ses émotions l'univers de la chanson
+              française aux sonorités jazz.<br/><br/><br/>
+              Une sensibilité à fleur de peau et une vision du monde tout en poésie, voilà le chemin sur lequel elle
+              s'est aventurée.<br/>
+            </p>
+          </div>
         </section>
         <section class="section-music">
           <div class="mdl-layout-title main-title">
-            MUSIC
+            MEDIAS
+          </div>
+          <div class="mdl-cell mdl-cell--3-col media-container">
+            <div class="mdl-layout-title">
+              Ailleurs sur la toile
+            </div>
+            <p class="media-text">
+              <a href="https://www.facebook.com/lagammine/"> > La Gammine sur Facebook</a><br/>
+              <a href="https://soundcloud.com/lagammine"> > La Gammine sur SoundCloud</a><br/>
+              <a href="https://www.youtube.com/channel/UCmrO9zujh5i-mkcEfd0lnAg"> > La Gammine sur YouTube</a><br/>
+            </p>
           </div>
         </section>
-        <section class="section-presse">
-          <div class="mdl-layout-title main-title">
-            PRESSE
-          </div>
-        </section>
-        <section class="section-contact">
-          <div class="mdl-layout-title main-title">
-            CONTACT
-          </div>
-        </section>
-        </div>
       </div>
     </section>
-    <footer>
-      <div class="audio-controls">
-        <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
-          <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
-        </audio>
-      </div>
-    </footer>
+        <!--<section class="section-photo">-->
+        <!--<div class="mdl-layout-title main-title">-->
+        <!--photos-->
+        <!--</div>-->
+        <!--</section>-->
+        <!--<section class="section-contact">-->
+        <!--<div class="mdl-layout-title main-title">-->
+        <!--CONTACT-->
+        <!--</div>-->
+        <!--</section>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</section>-->
+        <footer>
+          <div class="audio-controls">
+            <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+              <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
+            </audio>
+          </div>
+        </footer>
   </main>
 </section>
 

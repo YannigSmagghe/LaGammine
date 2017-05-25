@@ -240,11 +240,15 @@ html, body {
   display: none;
 }
 #audio-native{
-  /*display: none;*/
+  display: none;
 }
 
 .audio-controls{
   text-align: center;
+  margin-top: 5vh;
+}
+#TitleMusic{
+  padding-top: 3vh;
 }
 
 .mdl-layout__header-row{
@@ -261,17 +265,25 @@ html, body {
   padding-bottom: 1vh;
   background-color: rgba(0, 0,  0, 0.3);
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 1240px) {
   .date-container {
-    margin-top: -26vh;
+    margin-top: -20vh;
+    margin-left: 10vh;
   }
 }
 
 
 .date-container > ul > li >* {
   color: #ffffff;
-  font-family: mononoki;
+  font-family: moonflower;
+  font-size: 3vh;
 }
+.date-container > .mdl-layout-title{
+  color: #ffffff;
+  font-size: 5vh;
+  font-family: moonflower;
+}
+
 .date-container > ul > .mdl-list__item--three-line{
   margin-bottom: -5vh;
 }
@@ -279,10 +291,54 @@ html, body {
 .mdl-list__item--three-line .mdl-list__item-text-body{
   padding-left: 5px;
   color: rgba(255, 255, 255, 0.78);
-  font-family: mononoki;
+  font-family: moonflower;
+
 }
 
 
+.biographie-container{
+  margin-left: 15vh;
+  padding: 3vh;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.biographie-container > .biographie-text{
+  font-size: 3vh;
+  color: #333333;
+  font-weight: bold;
+  font-family: moonflower;
+}
+
+
+/*Media css*/
+.media-container{
+  margin-left: 15vh;
+  padding: 3vh;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.media-container > .mdl-layout-title{
+  color: #ffffff;
+  font-size: 5vh;
+  font-family: moonflower;
+}
+
+.media-container > .media-text{
+  margin-top: 3vh;
+  text-align: center;
+  font-size: 3vh;
+  color: #333333;
+  font-weight: bold;
+  font-family: moonflower;
+}
+
+.media-container > .media-text > a{
+  line-height: 5vh;
+  text-decoration:none;
+  color: #333333;
+  font-weight: bold;
+
+}
 
 /*Menu*/
 *{padding:0;margin:0;}
@@ -359,11 +415,4 @@ nav.vertical li:hover > ul{
 .main-title{
   font-family: moonflower;
   font-size: 15vh;
-}
-
-.date-container{
-  font-family: mononoki;
-}
-.date-container > .mdl-layout-title {
-  font-family: mononoki;
 }
