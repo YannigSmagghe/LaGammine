@@ -29,6 +29,9 @@ var current = srcBaseMusic.getAttribute('idMusic');
 var player = document.querySelector('#audio-native');
 getMusic(current);
 
+setTimeout(function(){ player.play(); }, 1000);
+playElement.classList.remove('fa-play');
+playElement.classList.add('fa-pause');
 function play() {
   if (player.paused) {
     player.play();
