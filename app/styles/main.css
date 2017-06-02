@@ -416,3 +416,9 @@ nav.vertical li:hover > ul{
   font-family: moonflower;
   font-size: 15vh;
 }
+
+/* Animated title*/
+#svg-canvas{
+  /*background-color: #777788;*/
+}
+
