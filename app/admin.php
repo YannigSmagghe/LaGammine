@@ -160,13 +160,13 @@ if ($_SESSION['pseudo'] === 'Marie'):
                 <form action="#" class="form-add-date">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="input-desc">
-                    <label class="mdl-textfield__label" for="input-date">Number...</label>
+                    <label class="mdl-textfield__label" for="input-date">Description...</label>
                   </div>
                 </form>
                 <form action="#" class="form-add-date">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="input-date">
-                    <label class="mdl-textfield__label" for="input-date">Number...</label>
+                    <label class="mdl-textfield__label" for="input-date">Date...</label>
                   </div>
                 </form>
 
