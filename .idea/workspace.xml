@@ -43,6 +43,7 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin.php">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="293">
               <caret line="168" column="77" lean-forward="false" selection-start-line="168" selection-start-column="77" selection-end-line="168" selection-end-column="77" />
               <folding />
@@ -113,6 +114,7 @@
                 <element signature="e#7165#7171#0" expanded="true" />
                 <element signature="e#7319#7324#1" expanded="true" />
               </folding>
+
             </state>
           </provider>
         </entry>
@@ -409,6 +411,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="89838000" />
   </component>
   <component name="TodoView">
@@ -430,6 +433,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299285" sideWeight="0.49817613" order="7" side_tool="false" content_ui="tabs" />
+
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -512,7 +516,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4114">
           <caret line="242" column="15" lean-forward="false" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1495383470607" expanded="true" signature="5200:5299" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,6 +752,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="332">
           <caret line="327" column="20" lean-forward="false" selection-start-line="327" selection-start-column="20" selection-end-line="327" selection-end-column="20" />
           <folding />
@@ -764,12 +771,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="488">
           <caret line="802" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="802" selection-end-column="10" />
           <folding>
@@ -780,6 +787,7 @@
             <element signature="e#7165#7171#0" expanded="true" />
             <element signature="e#7319#7324#1" expanded="true" />
           </folding>
+
         </state>
       </provider>
     </entry>
