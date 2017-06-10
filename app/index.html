@@ -77,7 +77,7 @@
       <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie</a>
       <a class="mdl-navigation__link" id="music" onclick="changeMenu(this.id)" href="#">Medias</a>
       <!--<a class="mdl-navigation__link" id="photo" onclick="changeMenu(this.id)" href="#">Photos</a>-->
-      <!--<a class="mdl-navigation__link" id="contact" onclick="changeMenu(this.id)" href="#">Contact</a>-->
+      <a class="mdl-navigation__link" id="contact" onclick="changeMenu(this.id)" href="#">Contact</a>
     </nav>
     <!--NAV CASCADE-->
     <!--<nav id="menu21" class="vertical ">-->
@@ -154,7 +154,7 @@
             </div>
 
             <style>
-              .titleSvg{
+              .titleSvg {
                 /*position: absolute;*/
                 /*top: 0;*/
                 /*left: 0;*/
@@ -168,6 +168,7 @@
                 font-family: Amatic SC;
                 -inkscape-font-specification: Amatic SC Bold "
               }
+
               @keyframes draw {
                 to {
                   stroke-dashoffset: 0;
@@ -250,28 +251,77 @@
             </p>
           </div>
         </section>
+        <section class="section-contact">
+          <div class="mdl-layout-title main-title">
+            CONTACT
+          </div>
+          <div id="mycard">
+
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Formulaire de Contact</h2>
+              </div>
+
+
+              <div class="mdl-card__supporting-text">
+                text d'accroche
+                <form method="post" action="mailManager.php">
+
+                  <div id="name">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" name="first">
+                      <label class="mdl-textfield__label" for="sample3">Prénom</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" name="last">
+                      <label class="mdl-textfield__label" for="sample3">Nom</label>
+                    </div>
+                  </div>
+
+                  <div id="contact-contact">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="mobile">
+                      <label class="mdl-textfield__label" for="sample2">Téléphone</label>
+                      <span class="mdl-textfield__error">Numéro invalide</span>
+                    </div>
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email">
+                        <label class="mdl-textfield__label" for="sample2">E-mail</label>
+                        <span class="mdl-textfield__error">E-mail invalide</span>
+                      </div>
+                  </div>
+                  <div name="message">
+                    <div id="input-message" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <textarea class="mdl-textfield__input" type="text" rows= "12" name="message" ></textarea>
+                      <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+                    </div>
+                  </div>
+                  <button id="envoi-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="envoi" type="submit">
+                    Envoyer
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
-        <!--<section class="section-photo">-->
-        <!--<div class="mdl-layout-title main-title">-->
-        <!--photos-->
-        <!--</div>-->
-        <!--</section>-->
-        <!--<section class="section-contact">-->
-        <!--<div class="mdl-layout-title main-title">-->
-        <!--CONTACT-->
-        <!--</div>-->
-        <!--</section>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</section>-->
-        <footer>
-          <div class="audio-controls">
-            <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
-              <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
-            </audio>
-          </div>
-        </footer>
+    <!--<section class="section-photo">-->
+    <!--<div class="mdl-layout-title main-title">-->
+    <!--photos-->
+    <!--</div>-->
+    <!--</section>-->
+
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <footer>
+      <div class="audio-controls">
+        <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+          <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
+        </audio>
+      </div>
+    </footer>
   </main>
 </section>
 
