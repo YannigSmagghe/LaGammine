@@ -66,6 +66,7 @@ function play() {
 // }
 
 function nextMusic() {
+  var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
   var next = current +1 ;
   getMusic(next);
 }
@@ -73,3 +74,7 @@ function previousMusic() {
   var prev = current -1 ;
   getMusic(prev);
 }
+
+player.onended = function() {
+  nextMusic();
+};
