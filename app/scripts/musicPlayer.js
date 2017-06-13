@@ -72,6 +72,7 @@ function nextMusic() {
 }
 function previousMusic() {
   var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
+  var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
   var prev = current -1 ;
   getMusic(prev);
 }
