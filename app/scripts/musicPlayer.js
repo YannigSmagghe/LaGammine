@@ -10,7 +10,7 @@ function getMusic(indexMusic) {
         indexMusic = 0;
       }
       if (indexMusic < 0){
-        indexMusic = maxTab - 1;
+        indexMusic = maxTab;
       }
         // set music
         srcBaseMusic.setAttribute('src', 'music/' + data[indexMusic].title);
