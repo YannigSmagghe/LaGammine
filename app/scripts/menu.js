@@ -34,10 +34,10 @@ function showMenu() {
 
 // init with main page
 $.each(arraySection, function( index, value ) {
-  if (value !== 'accueil' ){
+  if (value !== 'contact' ){
     $('.section-'+value).hide()
   }
-  if (value === 'accueil' ||value === 'admin-accueil'){
+  if (value === 'contact' ||value === 'admin-accueil'){
     $('.section-'+value).show()
   }
 });

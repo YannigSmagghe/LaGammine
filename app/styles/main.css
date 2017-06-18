@@ -425,7 +425,7 @@ nav.vertical li:hover > ul{
 /** CONTACT **/
 .demo-card-wide.mdl-card {
   width: 640px;
-  height: 640px;
+  height: 583px;
 
 }
 
@@ -462,7 +462,6 @@ nav.vertical li:hover > ul{
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 64px;
-  background-color:indigo;
 }
 
 .mdl-card__title-text {
@@ -481,7 +480,6 @@ nav.vertical li:hover > ul{
   width:100%;
   display:flex;
   flex-direction: row;
-// outline: red solid 10px;
   justify-content: center;
   align-items: center;
 }
@@ -492,8 +490,43 @@ nav.vertical li:hover > ul{
 }
 #input-message{
   width: 32em;
-  height: 16em;
+  height: 10.7em;
 }
 #envoi-button{
   margin-left: 16em;
+}
+
+.head-form > .mdl-card__title{
+
+}
+#mycard > .head-form{
+  background-color: hsla(0,0%,100%,.6);
+  height: 33em;
+
+}
+.textarea-form{
+  height:120px;
+}
+
+.mdl-textfield.is-invalid .mdl-textfield__input{
+  border-color: #ad453e !important;
+}
+.mdl-textfield--floating-label.is-invalid .mdl-textfield__label{
+  color: #ad453e !important;
+}
+.mdl-textfield__error{
+  color: #ad453e !important;
+}
+.mdl-demo .mdl-card .mdl-card__supporting-text{
+  margin-top: 0px!important;
+}
+
+@media screen and (max-width: 740px) {
+  #mycard > .head-form{
+    background-color: hsla(0,0%,100%,.6);
+    height: 37em;
+  }
+  #envoi-button{
+    margin-left: 6em
+  }
 }
