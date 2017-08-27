@@ -60,20 +60,24 @@
 <section class="demo-layout-transparent mdl-layout  mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
       <div class="mdl-layout__drawer-button"><i class="material-icons">menu</i></div>
       <div class="mdl-layout-title">Menu</div>
+    </div>
+    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
     </div>
 
   </header>
   <!--YS: Nav Menu-->
-  <div class="mdl-layout__drawer">
+  <div class="mdl-layout__drawer is-visible">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" id="accueil" onclick="changeMenu(this.id)" href="#">Accueil</a>
       <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie</a>
       <a class="mdl-navigation__link" id="music" onclick="changeMenu(this.id)" href="#">Medias</a>
       <!--<a class="mdl-navigation__link" id="photo" onclick="changeMenu(this.id)" href="#">Photos</a>-->
-      <!--<a class="mdl-navigation__link" id="contact" onclick="changeMenu(this.id)" href="#">Contact</a>-->
+      <a class="mdl-navigation__link" id="contact" onclick="changeMenu(this.id)" href="#">Contact</a>
     </nav>
     <!--NAV CASCADE-->
     <!--<nav id="menu21" class="vertical ">-->
@@ -109,7 +113,7 @@
         <section class="section-accueil">
           <div class="mdl-layout-title main-title">
             <div class="svg-container">
-              <svg id="svg-canvas" version="1.1" viewBox="80 30 60 55" >
+              <svg id="svg-canvas" version="1.1" viewBox="80 30 60 55" width="740" height="150">
                 <path class="titleSvg" fill-opacity="0" stroke="#FFF" stroke-width="1.5"
                       d="m 14.871094,82.101251 -2,-0.0625 q -0.34375,0 -0.875,0.375 -0.53125,0.40625 -0.96875,0.40625 -0.4375,0 -0.90625,-0.40625 -0.4375002,-0.40625 -0.4375002,-0.9375 l 0.3750002,-2.90625 -0.6250002,-18.15625 -0.65625,-26.75 q 0,-0.65625 0.84375,-0.65625 1.2187502,0 1.2187502,1.15625 0,14.78125 0.3125,18.75 0.3125,3.9375 0.3125,4.875 0,0.9375 -0.125,2.5 l 0.1875,0.25 q -0.125,1.6875 -0.125,3.4375 0,1.71875 0.3125,6.625 0.34375,4.90625 0.40625,6.96875 -0.25,0.375 -0.25,1.28125 0,0.90625 0.28125,1.21875 0.3125,0.3125 1.28125,0.3125 0.96875,0 1.3125,-0.40625 h 2.375 q 0.875,0.4375 0.875,1 0,1.25 -0.875,1.25 -0.21875,0 -0.96875,-0.25 -0.3125,0.125 -1.28125,0.125 z"
 
@@ -150,18 +154,7 @@
             </div>
 
             <style>
-              #svg-canvas {
-                width: 740px;
-                height: 150px;
-              }
-              @media screen and (min-width: 200px) and (max-width: 750px) {
-                #svg-canvas {
-                  width:270px;
-                  height:70px;
-                }
-              }
-
-              .titleSvg{
+              .titleSvg {
                 /*position: absolute;*/
                 /*top: 0;*/
                 /*left: 0;*/
@@ -175,6 +168,7 @@
                 font-family: Amatic SC;
                 -inkscape-font-specification: Amatic SC Bold "
               }
+
               @keyframes draw {
                 to {
                   stroke-dashoffset: 0;
@@ -210,6 +204,13 @@
               <div id="TitleMusic"></div>
             </div>
           </div>
+          <!-- social icon-->
+          <div class="mdl-cell mdl-cell--3-col social-container">
+            <div class="social-icon facebook-icon" aria-hidden="true"></div>
+            <div class="social-icon yt-icon" aria-hidden="true"></div>
+            <div class="social-icon soundcloud-icon" aria-hidden="true"></div>
+          </div>
+
           <!--Deskop interface-->
           <div class="mdl-cell mdl-cell--3-col date-container">
             <div class="mdl-layout-title">
@@ -251,10 +252,62 @@
               Ailleurs sur la toile
             </div>
             <p class="media-text">
-              <a target="_blank" href="https://www.facebook.com/lagammine/"> > La Gammine sur Facebook</a><br/>
-              <a target="_blank" href="https://soundcloud.com/lagammine"> > La Gammine sur SoundCloud</a><br/>
-              <a target="_blank" href="https://www.youtube.com/channel/UCmrO9zujh5i-mkcEfd0lnAg"> > La Gammine sur YouTube</a><br/>
+              <a href="https://www.facebook.com/lagammine/"> > La Gammine sur Facebook</a><br/>
+              <a href="https://soundcloud.com/lagammine"> > La Gammine sur SoundCloud</a><br/>
+              <a href="https://www.youtube.com/channel/UCmrO9zujh5i-mkcEfd0lnAg"> > La Gammine sur YouTube</a><br/>
             </p>
+          </div>
+        </section>
+        <section class="section-contact">
+          <div class="mdl-layout-title main-title">
+            CONTACT
+          </div>
+          <div id="mycard">
+
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp head-form">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Formulaire de Contact</h2>
+              </div>
+
+
+              <div class="mdl-card__supporting-text">
+                <form method="post" action="mailManager.php">
+
+                  <div id="name">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" name="first" required>
+                      <label class="mdl-textfield__label" for="sample3">Prénom</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" name="last" required>
+                      <label class="mdl-textfield__label" for="sample3">Nom</label>
+                    </div>
+                  </div>
+
+                  <div id="contact-contact">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="mobile">
+                      <label class="mdl-textfield__label" for="sample2">Téléphone</label>
+                      <span class="mdl-textfield__error">Numéro invalide</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="email" required>
+                      <label class="mdl-textfield__label" for="sample2">E-mail</label>
+                      <span class="mdl-textfield__error">E-mail invalide</span>
+                    </div>
+                  </div>
+                  <div name="message">
+                    <div id="input-message" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <textarea class="mdl-textfield__input textarea-form" type="text" rows= "12" name="message" required></textarea>
+                      <label class="mdl-textfield__label" for="sample5">Votre message...</label>
+                    </div>
+                  </div>
+                  <button id="envoi-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="envoi" type="submit">
+                    Envoyer
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -264,19 +317,15 @@
     <!--photos-->
     <!--</div>-->
     <!--</section>-->
-    <!--<section class="section-contact">-->
-    <!--<div class="mdl-layout-title main-title">-->
-    <!--CONTACT-->
-    <!--</div>-->
-    <!--</section>-->
+
     <!--</div>-->
     <!--</div>-->
     <!--</section>-->
     <footer>
       <div class="audio-controls">
-        <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
-          <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
-        </audio>
+        <!--<audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">-->
+          <!--<source id="baseMusic" idMusic="0" src="" type="audio/mpeg">-->
+        <!--</audio>-->
       </div>
     </footer>
   </main>
@@ -296,19 +345,19 @@
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-              (i[r].q = i[r].q || []).push(arguments)
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
+        a = s.createElement(o),
             m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-XXXXX-X', 'auto');
-  ga('send', 'pageview');
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
 </script>
 <!-- Built with love using Web Starter Kit -->
 </body>
