@@ -1,61 +1,63 @@
-var titlePromise = $.getJSON('music-title.json');
+let titlePromise = $.getJSON('music-title.json');
 
 // when both requests complete
 function getMusic(indexMusic) {
-  $.when(titlePromise).then(function (jsonComments, status) {
+    $.when(titlePromise).then(function (jsonComments, status) {
 
-    $.each(jsonComments, function (key, data) {
-      var maxTab = Object.keys(jsonComments['Music']).length -1;
-      if (indexMusic > maxTab){
-        indexMusic = 0;
-      }
-      if (indexMusic < 0){
-        indexMusic = maxTab;
-      }
-        // set music
-        srcBaseMusic.setAttribute('src', 'music/' + data[indexMusic].title);
-        // set idMusic
-        srcBaseMusic.setAttribute('idMusic', indexMusic);
+        $.each(jsonComments, function (key, data) {
+            let maxTab = Object.keys(jsonComments['Music']).length - 1;
+            if (indexMusic > maxTab) {
+                indexMusic = 0;
+            }
+            if (indexMusic < 0) {
+                indexMusic = maxTab;
+            }
+            // set music
+            srcBaseMusic.setAttribute('src', 'music/' + data[indexMusic].title);
+            // set idMusic
+            srcBaseMusic.setAttribute('idMusic', indexMusic);
 
-        var title = $.map(data[indexMusic].title.split("."), $.trim);
-        titleMusic.empty();
-        titleMusic.append(title[0]);
-        player.load();
-      if (player.paused) {
-          player.play();
-          playElement.classList.remove('fa-play');
-          playElement.classList.add('fa-pause');
-        } else{
-          player.play();
-        }
+            let title = $.map(data[indexMusic].title.split("."), $.trim);
+            titleMusic.empty();
+            titleMusic.append(title[0]);
+            player.load();
+            if (player.paused) {
+                player.play();
+                playElement.classList.remove('fa-play');
+                playElement.classList.add('fa-pause');
+            } else {
+                player.play();
+            }
 
+        });
     });
-  });
 }
-var srcBaseMusic = document.getElementById("baseMusic");
-var titleMusic = $("#TitleMusic");
-var playElement = document.getElementById("play");
-var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
-var player = document.querySelector('#audio-native');
+let srcBaseMusic = document.getElementById("baseMusic");
+let titleMusic = $("#TitleMusic");
+let playElement = $("#play-button");
+let pauseElement = $("#pause-button");
+let current = parseInt(srcBaseMusic.getAttribute('idMusic'));
+let player = document.querySelector('#audio-native');
 
 
 getMusic(current);
-setTimeout(function(){ player.play(); }, 1000);
-
-
-playElement.classList.remove('fa-play');
-playElement.classList.add('fa-pause');
-function play() {
-  if (player.paused) {
+setTimeout(function () {
     player.play();
-    playElement.classList.remove('fa-play');
-    playElement.classList.add('fa-pause');
-  } else {
-    player.pause();
-    playElement.classList.remove('fa-pause');
-    playElement.classList.add('fa-play');
+}, 1000);
 
-  }
+
+function play() {
+    console.log(player);
+    if (player.paused) {
+        player.play();
+        playElement.hide();
+        pauseElement.show();
+    } else {
+        player.pause();
+        pauseElement.hide();
+        playElement.show();
+
+    }
 }
 //
 // function resume(idPlayer) {
@@ -66,16 +68,16 @@ function play() {
 // }
 
 function nextMusic() {
-  var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
-  var next = current +1 ;
-  getMusic(next);
+    let current = parseInt(srcBaseMusic.getAttribute('idMusic'));
+    let next = current + 1;
+    getMusic(next);
 }
 function previousMusic() {
-  var current = parseInt(srcBaseMusic.getAttribute('idMusic'));
-  var prev = current -1 ;
-  getMusic(prev);
+    let current = parseInt(srcBaseMusic.getAttribute('idMusic'));
+    let prev = current - 1;
+    getMusic(prev);
 }
 
-player.onended = function() {
-  nextMusic();
+player.onended = function () {
+    nextMusic();
 };

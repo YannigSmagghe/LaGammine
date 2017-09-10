@@ -195,12 +195,32 @@
             </style>
           </div>
           <div class="audio-controls mdl-cell mdl-cell--12-col">
+            <img    id="backward-button"
+                    onclick="previousMusic()"
+                    src="images/svg/backward.svg"
+                    alt="Précedent"
+                    height="87px"
+                    width="100px" />
+            <img    id="play-button"
+                    onclick="play()"
+                    src="images/svg/play.svg"
+                    alt="Jouer"
+                    height="87px"
+                    width="100px" />
+            <img    id="pause-button"
+                    onclick="play()"
+                    src="images/svg/pause.svg"
+                    alt="Pause"
+                    height="87px"
+                    width="100px"
+                    style="display: none" />
+            <img    id="forward-button"
+                    onclick="nextMusic()"
+                    src="images/svg/froward.svg"
+                    alt="Suivant"
+                    height="87px"
+                    width="100px" />
             <div>
-              <i id="prev" onclick="previousMusic()" class="fa fa-backward fa-2x" aria-hidden="true"></i>
-              <span class="mdl-cell mdl-cell--1-col"></span>
-              <i id="play" onclick="play('audio-native', this)" class="fa fa-play fa-3x" aria-hidden="true"></i>
-              <span class="mdl-cell mdl-cell--1-col"></span>
-              <i id="next" onclick="nextMusic()" class="fa fa-forward fa-2x" aria-hidden="true"></i>
               <div id="TitleMusic"></div>
             </div>
           </div>
@@ -323,9 +343,9 @@
     <!--</section>-->
     <footer>
       <div class="audio-controls">
-        <!--<audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">-->
-          <!--<source id="baseMusic" idMusic="0" src="" type="audio/mpeg">-->
-        <!--</audio>-->
+        <audio id="audio-native" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+          <source id="baseMusic" idMusic="0" src="" type="audio/mpeg">
+        </audio>
       </div>
     </footer>
   </main>
