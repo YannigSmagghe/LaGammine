@@ -296,7 +296,13 @@ html, body {
 }
 
 #TitleMusic {
-    padding-top: 3vh;
+    color: white;
+}
+#backward-button{
+    margin-right: 20px
+}
+#forward-button{
+    margin-left: 15px
 }
 
 .mdl-layout__header-row {
@@ -317,45 +323,62 @@ html, body {
 
 @media screen and (min-width: 1240px) {
     .date-container {
-        margin-top: -20vh;
-        margin-left: 10vh;
+        margin-top: -34vh;
+        margin-left: 1vh;
     }
 }
 
 .date-container > ul > li > * {
     color: #ffffff;
+    font-family: bgroveb;
+    font-size: 18px;
+}
+#rdv-title{
+    text-align: left;
+    margin-left: 15px;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+    font-size: 38px;
     font-family: moonflower;
-    font-size: 3vh;
+    margin-top: 3px;
 }
 
 .date-container > .mdl-layout-title {
     color: #ffffff;
     font-size: 5vh;
-    font-family: moonflower;
 }
 
 .date-container > ul > .mdl-list__item--three-line {
     margin-bottom: -5vh;
+
 }
 
 .mdl-list__item--three-line .mdl-list__item-text-body {
     padding-left: 5px;
     color: rgba(255, 255, 255, 0.78);
-    font-family: moonflower;
+    font-family: bgroveb;
 
 }
 
 .biographie-container {
-    margin-left: 15vh;
     padding: 3vh;
-    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
 }
 
-.biographie-container > .biographie-text {
-    font-size: 3vh;
-    color: #333333;
+#biographie-title{
+    text-align: left;
+    margin-left: 26px;
+    margin-top: 26px;
     font-weight: bold;
-    font-family: moonflower;
+    display: inline-block;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+    font-size: 38px;
+}
+.biographie-text {
+    font-size: 18px;
 }
 
 /*Media css*/
@@ -392,8 +415,13 @@ html, body {
 * {
     padding: 0;
     margin: 0;
+    font-family: bgroveb;
+    font-size: 18px;
 }
 
+.custom-menu>*{
+    font-size: 22px;
+}
 body {
     font: 16px/1 sans-serif
 }
@@ -468,7 +496,17 @@ nav.vertical li:hover > ul {
     font-family: moonflower;
     src: url(../font/MoonFlower.ttf);
 }
+@font-face {
+    font-family: bgroveb;
+    src: url(../font/bgrove.ttf);
+}
 
+
+.menu-title{
+    font-weight: bold;
+    font-size: 28px;
+    font-family: bgroveb;
+}
 .main-title {
     font-family: moonflower;
     font-size: 15vh;

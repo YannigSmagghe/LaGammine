@@ -63,7 +63,7 @@
     </div>
     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
       <div class="mdl-layout__drawer-button"><i class="material-icons">menu</i></div>
-      <div class="mdl-layout-title">Menu</div>
+      <div class="mdl-layout-title menu-title">Menu</div>
     </div>
     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
     </div>
@@ -71,8 +71,8 @@
   </header>
   <!--YS: Nav Menu-->
   <div class="mdl-layout__drawer is-visible">
-    <span class="mdl-layout-title">Menu</span>
-    <nav class="mdl-navigation">
+    <!--<span class="mdl-layout-title menu-title">Menu</span>-->
+    <nav class="mdl-navigation custom-menu">
       <a class="mdl-navigation__link" id="accueil" onclick="changeMenu(this.id)" href="#">Accueil</a>
       <a class="mdl-navigation__link" id="biographie" onclick="changeMenu(this.id)" href="#">Biographie</a>
       <a class="mdl-navigation__link" id="music" onclick="changeMenu(this.id)" href="#">Medias</a>
@@ -197,29 +197,31 @@
           <div class="audio-controls mdl-cell mdl-cell--12-col">
             <img    id="backward-button"
                     onclick="previousMusic()"
-                    src="images/svg/backward.svg"
+                    src="images/svg/backward-button.svg"
                     alt="Précedent"
                     height="87px"
-                    width="100px" />
+                    width="41px"
+                    />
             <img    id="play-button"
                     onclick="play()"
-                    src="images/svg/play.svg"
+                    src="images/svg/play-button.svg"
                     alt="Jouer"
                     height="87px"
-                    width="100px" />
+                    width="41px" />
             <img    id="pause-button"
                     onclick="play()"
-                    src="images/svg/pause.svg"
+                    src="images/svg/pause-button.svg"
                     alt="Pause"
                     height="87px"
-                    width="100px"
+                    width="41px"
                     style="display: none" />
             <img    id="forward-button"
                     onclick="nextMusic()"
-                    src="images/svg/froward.svg"
+                    src="images/svg/forward-button.svg"
                     alt="Suivant"
                     height="87px"
-                    width="100px" />
+                    width="41px"
+                    />
             <div>
               <div id="TitleMusic"></div>
             </div>
@@ -233,7 +235,7 @@
 
           <!--Deskop interface-->
           <div class="mdl-cell mdl-cell--3-col date-container">
-            <div class="mdl-layout-title">
+            <div class="mdl-layout-title" id="rdv-title">
               Rendez-Vous
             </div>
             <ul class="demo-list-item mdl-list list-date">
@@ -249,18 +251,22 @@
           </div>
         </section>
         <section class="section-biographie">
-          <div class="mdl-layout-title main-title">
-            BIOGRAPHIE
+          <div class="mdl-layout-title main-title" id="biographie-title">
+            Biographie
           </div>
-          <div class="mdl-cell mdl-cell--3-col biographie-container">
-            <p class="biographie-text">
-              Cheveux et guitare au vent, La Gammine transporte dans ses valises sa passion pour la musique et son envie
-              de faire entendre sa voix.<br/><br/><br/>
-              Dans le tremblement subtil de ses mélodies, elle mélange au rythme de ses émotions l'univers de la chanson
-              française aux sonorités jazz.<br/><br/><br/>
-              Une sensibilité à fleur de peau et une vision du monde tout en poésie, voilà le chemin sur lequel elle
-              s'est aventurée.<br/>
-            </p>
+          <div class="mdl-cell mdl-cell--12-col biographie-container">
+            <div class="mdl-grid center-items">
+              <div class="mdl-cell mdl-cell--2-col"></div>
+              <div class="mdl-cell mdl-cell--4-col"> <p class="biographie-text">
+                Cheveux et guitare au vent, La Gammine transporte dans ses valises sa passion pour la musique et son envie
+                de faire entendre sa voix.<br/><br/>
+                Dans le tremblement subtil de ses mélodies, elle mélange au rythme de ses émotions l'univers de la chanson
+                française aux sonorités jazz.<br/><br/>
+                Une sensibilité à fleur de peau et une vision du monde tout en poésie, voilà le chemin sur lequel elle
+                s'est aventurée.<br/>
+              </p></div>
+            </div>
+
           </div>
         </section>
         <section class="section-music">
@@ -360,6 +366,7 @@
 <script src="scripts/custom.js"></script>
 <script src="scripts/musicPlayer.js"></script>
 <script src="scripts/menu.js"></script>
+<script src="scripts/admin-dates.js"></script>
 
 <!-- endbuild -->
 

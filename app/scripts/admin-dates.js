@@ -1,11 +1,11 @@
 function newEntrie() {
-  var place = '';
-  var desc = '';
-  var date = '';
+  let place = '';
+  let desc = '';
+  let date = '';
 
   $("form.form-add-date :input").each(function () {
-    var input = $(this); // This is the jquery object of the input, do what you will
-    var idInput = input.attr('id');
+    let input = $(this); // This is the jquery object of the input, do what you will
+    let idInput = input.attr('id');
     if (idInput === 'input-place') {
       return place = input.val();
     }
@@ -17,7 +17,7 @@ function newEntrie() {
     }
 
   });
-  var lastId = $('#table-date tr:last').attr('id');
+  let lastId = $('#table-date tr:last').attr('id');
   lastId = parseInt(lastId) + 1;
   addLastRow(lastId,place, desc, date, true);
 }
@@ -25,20 +25,20 @@ function newEntrie() {
 function addLastRow(index,place, desc, date, fromNewEntrie) {
   // ajout de la rangée dans le tableau
     $('#0').hide();
-    var lastId = index;
-    console.log(index);
-    var appendItem = '<tr id="' + lastId + '">';
+    let lastId = index;
+    let appendItem = '<tr id="' + lastId + '">';
     if (fromNewEntrie) {
       appendItem += '<td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td>';
     }
-    appendItem += '<td class="mdl-data-table__cell--non-numeric td-place">' + place + '</td>';
+
     appendItem += '<td class="mdl-data-table__cell--non-numeric td-desc">' + desc + '</td>';
     appendItem += '<td class="mdl-data-table__cell--non-numeric td-date">' + date + '</td></tr>';
+    appendItem += '<td class="mdl-data-table__cell--non-numeric td-place">' + place + '</td>';
     $('#table-date tr:last').after(appendItem);
 
     // Update dates.json
     if (fromNewEntrie) {
-      var newObject = {};
+      let newObject = {};
       if (place) {
         newObject.place = place;
       }
@@ -49,7 +49,7 @@ function addLastRow(index,place, desc, date, fromNewEntrie) {
         newObject.date = date;
       }
       if (fromNewEntrie) {
-        var dataComplete = {
+        let dataComplete = {
           "place": place,
           "desc": desc,
           "date": date
@@ -68,11 +68,11 @@ function addLastRow(index,place, desc, date, fromNewEntrie) {
 
 function deleteRow(){
   $('.is-checked').each(function () {
-    var tdIdBase = $(this).parent().parent().attr('id');
-    var tdId = '#'+tdIdBase;
+    let tdIdBase = $(this).parent().parent().attr('id');
+    let tdId = '#'+tdIdBase;
     $(tdId).children().hide();
     $(tdId).hide();
-    var dataComplete = {
+    let dataComplete = {
       "id": tdIdBase
     };
     dataComplete = $(this).serialize() + "&" + $.param(dataComplete);
